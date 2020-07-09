@@ -20,12 +20,7 @@ jobs:
         node-version: '12'
     - run: npm install
     - run: npm run prod
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: rsync deployments
-      uses: burnett01/rsync-deployments@4.1
+    - uses: burnett01/rsync-deployments@4.1
       with:
         switches: -avzr
         path: public/images
