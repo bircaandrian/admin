@@ -10,10 +10,12 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  build-and-test:
+  build:
     runs-on: node-latest
-    name: Build and test
+    name: build
     steps:
-      - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1
-      - run: npm run prod
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - run: npm install
