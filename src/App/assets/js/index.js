@@ -1,4 +1,5 @@
 // Load jQuery and Bootstrap
+// dsfbsdbfds fdsf sd fgdszdf dsf sd fdsd 
 
 try {
     window.$ = window.jQuery = require('jquery');
